@@ -489,14 +489,14 @@ body {
   color: #7f8c8d;
 }
 
-/* PAGE PROJETS */
-.projects-grid {
-  display: flex;
-  flex-direction: column;
+/* PAGE SOFT SKILLS */
+.softskills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
 }
 
-.project-card-full {
+.softskill-card {
   display: flex;
   gap: 20px;
   background: #fff;
@@ -506,17 +506,17 @@ body {
   transition: all 0.3s;
 }
 
-.project-card-full:hover {
+.softskill-card:hover {
   border-color: #667eea;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
-  transform: translateX(5px);
+  transform: translateY(-5px);
 }
 
-.project-icon {
+.softskill-icon {
   font-size: 48px;
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 12px;
   display: flex;
@@ -524,43 +524,20 @@ body {
   justify-content: center;
 }
 
-.project-content h3 {
-  font-size: 22px;
+.softskill-content {
+  flex: 1;
+}
+
+.softskill-content h3 {
+  font-size: 20px;
   color: #2c3e50;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.project-badge {
-  display: inline-block;
-  padding: 5px 12px;
-  background: #667eea;
-  color: #fff;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.project-content p {
+.softskill-content p {
   color: #666;
   line-height: 1.7;
-  margin-bottom: 15px;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag {
-  padding: 5px 12px;
-  background: #f8f9fa;
-  color: #667eea;
-  border-radius: 15px;
-  font-size: 12px;
-  font-weight: 500;
-  border: 1px solid #e0e0e0;
+  font-size: 15px;
 }
 
 /* PAGE CONTACT */
@@ -671,15 +648,16 @@ body {
   }
 
   .skills-grid,
-  .contact-grid {
+  .contact-grid,
+  .softskills-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-card-full {
+  .softskill-card {
     flex-direction: column;
   }
 
-  .project-icon {
+  .softskill-icon {
     width: 60px;
     height: 60px;
     font-size: 36px;
